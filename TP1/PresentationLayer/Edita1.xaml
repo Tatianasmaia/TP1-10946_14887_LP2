@@ -8,16 +8,15 @@
         Title="MainWindow" Height="431.25" Width="384.688">
     <Grid Margin="0,0,2,1">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="111*"/>
-            <ColumnDefinition Width="679*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="85,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="117"><Run Text="Gestão Hospitalar"/><LineBreak/><Run/></TextBlock>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="98,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="88"><Run Text="Editar "/><Run Text="Utente "/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-        <Button Content="Editar Informacao de Utente" HorizontalAlignment="Left" Margin="43,191,0,0" VerticalAlignment="Top" Width="184" Height="46" Click="Registar" Grid.Column="1"/>
-        <Button Content="Sair" Grid.Column="1" HorizontalAlignment="Left" Margin="229,349,0,0" VerticalAlignment="Top" Width="75" Height="27" Click="Button_Click_4"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Text="Insira o número do utente que pretende "/><Run Text="editar"/><Run Text=":"/></TextBlock>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="64,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Button Content="Voltar a Adicionar Utente do Histórico" HorizontalAlignment="Left" Margin="29,270,0,0" VerticalAlignment="Top" Width="216" Height="46" Click="Registar" Grid.Column="1"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="138,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="176"><Run Text="Editar Utente" Foreground="White" FontSize="20"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <Button Content="Editar Informacao de Utente" HorizontalAlignment="Left" Margin="104,169,0,0" VerticalAlignment="Top" Width="184" Height="46" Click="EditarUtente_Click" Grid.Column="1"/>
+        <Button Content="Sair" Grid.Column="1" HorizontalAlignment="Left" Margin="273,355,0,0" VerticalAlignment="Top" Width="75" Height="27" Click="Sair_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="74,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="274"><Run Text="Insira o número do utente que pretende editar" Foreground="White"/></TextBlock>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="124,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <Button Content="Voltar a Adicionar Utente do Histórico" HorizontalAlignment="Left" Margin="88,239,0,0" VerticalAlignment="Top" Width="216" Height="46" Click="VoltaAdd_Click" Grid.Column="1"/>
 
 
     </Grid>

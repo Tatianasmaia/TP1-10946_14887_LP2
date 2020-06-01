@@ -11,12 +11,11 @@
             <ColumnDefinition Width="111*"/>
             <ColumnDefinition Width="679*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="119,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="117"><Run Text="Gestão Hospitalar"/><LineBreak/><Run/></TextBlock>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="85,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="172"><Run Text="Remover Utente (de infetados)"/><LineBreak/><Run/></TextBlock>
-        <Button Content="Remover" Grid.Column="1" HorizontalAlignment="Left" Margin="2,243,0,0" VerticalAlignment="Top" Width="138" Height="39" Click="Registar"/>
-        <Button Content="Sair" Grid.Column="1" HorizontalAlignment="Left" Margin="254,298,0,0" VerticalAlignment="Top" Width="75" Height="27" Click="Button_Click_4"/>
-        <TextBlock HorizontalAlignment="Left" Margin="30,89,0,0" TextWrapping="Wrap" Text="Insira o número do utente que pretende remover:" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="2,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="53,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="302"><Run Text="Remover Utente (de infetados)" FontSize="16"/><LineBreak/><Run/></TextBlock>
+        <Button Content="Remover" Grid.Column="1" HorizontalAlignment="Left" Margin="81,190,0,0" VerticalAlignment="Top" Width="140" Height="39" Click="Remover_Click"/>
+        <!--<Button Content="Sair" Grid.Column="1" HorizontalAlignment="Left" Margin="252,314,0,0" VerticalAlignment="Top" Width="75" Height="27" Click="Sair_Click"/>-->
+        <TextBlock HorizontalAlignment="Left" Margin="0,83,0,0" TextWrapping="Wrap" Text="Insira o número do utente que pretende remover:" VerticalAlignment="Top" FontSize="14" Grid.Column="1"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="81,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Name="tb_Num"/>
 
 
     </Grid>

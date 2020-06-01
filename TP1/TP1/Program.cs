@@ -25,148 +25,12 @@ namespace TP1
         static void Main(string[] args)
         {
 
-            RegistarCaso();
-            RegistarCaso();
-            //ConsultaIdades();
-            //ConsultaRegiao();
-            //ConsultaSexo();
-            //RegistarCaso();
-            //RemoveUtente();
-
-            //ListarInfetados();
-            //ListarHistorico();
+           
 
             Console.ReadKey();
 
         }
 
-    
-
-        /// <summary>
-        /// Função que regista novo caso
-        /// </summary>
-        public static void RegistarCaso()
-        {
-
-            Utente u = new Utente();
-            bool aux = false, aux2=false;
-
-
-            //Pede os dados ao utente
-            Console.WriteLine("Introduza o seu primeiro nome: ");
-            string nome = Console.ReadLine();
-            u.Nome = nome;
-
-            Console.WriteLine("Introduza a sua idade: ");
-            int idade = Int32.Parse(Console.ReadLine());
-            while(idade < 0 || idade > 110)
-            {
-                Console.WriteLine("Introduza uma idade valida! : ");
-                idade = Int32.Parse(Console.ReadLine());
-            }
-            u.Idade = idade;
-
-            Console.WriteLine("Introduza o NIF: ");
-            int nif = Int32.Parse(Console.ReadLine());
-
-            //Verifica se o nif tem 9 digitos
-            do
-            {
-                aux = Rules.VerificaDigitos(nif);
-                if (aux == false)
-                {
-                    Console.WriteLine("O nif que inseriu nao tem o numero de digitos correto! Insira outra vez!");
-                    nif = Int32.Parse(Console.ReadLine());
-                }
-            }
-            while (aux == false);
-            
-
-            //Verifica se o nif já foi inserido por outro utente
-            do
-            {
-                aux2 = Rules.VerificaNif(nif);
-                if (aux2 == true)
-                {
-                    Console.WriteLine("Esse nif ja esta inserido! \n Insira outra vez pf!");
-                    nif = Int32.Parse(Console.ReadLine());
-                }
-            }
-            while (aux2 == true);
-            
-
-            u.Nif = nif;
-
-            Console.WriteLine("Introduza a sua Regiao: ");
-            string regiao = Console.ReadLine();
-            u.Regiao = regiao;
-
-            //Falta fazer a verificação do sexo
-            Console.WriteLine("Introduza o seu sexo: ");
-            string sexo = Console.ReadLine();
-            //while( String.Compare(sexo,"feminino") != 0 || String.Compare(sexo, "masculino") != 0)
-            ////while(sexo!= "feminino" || sexo != "masculino")
-            //{
-                
-            //    Console.WriteLine("Introduza um sexo válido! : ");
-            //    sexo = Console.ReadLine();
-            //}
-
-            u.Sexo = sexo;
-
-            //Envia para a camada Business Rules
-            aux = Rules.InsereUtente(u);
-
-
-            if (aux == true)
-            {
-                Console.WriteLine("O utente foi adicionado com sucesso!");
-            }
-            else
-            {
-                Console.WriteLine("O utente que pretende inserir já existe!");
-                Console.Clear();
-                //RegistarCaso();
-            }
-
-            Rules.Save("listaUtentes");
-            //Dar Clear
-            Rules.Load("listaUtentes");
-
-            Console.ReadKey();
-            Console.Clear();
-
-        }
-
-        /// <summary>
-        /// Função que remove um utente de cordo com o seu número de utente
-        /// </summary>
-        public static void RemoveUtente()
-        {
-            
-            Console.WriteLine("Introduza o numero do utente que pretende remover: ");
-            int num = Int32.Parse(Console.ReadLine());
-            
-
-            int aux = Rules.RemoveUtente(num);
-
-            if (aux == 0)
-            {
-                Console.WriteLine("Nao existe nenhum utente inserido");
-            }
-            else if (aux == 1)
-            {
-                Console.WriteLine("O id que inseriu nao esta registado");
-            }
-            else if (aux == 2)
-            {
-                Console.WriteLine("O utente foi removido com sucesso!");
-
-                Rules.SaveHistoricoU("historicoUtentes");
-                //Dar Clear
-                Rules.LoadHistoricoU("historicoUtentes");
-            }
-        }
 
         /// <summary>
         /// Função que consulta as informações de um utente através do seu nif que é introduzido pelo utilizador
@@ -198,7 +62,7 @@ namespace TP1
             }
             else if (aux == 0)
             {
-                Console.WriteLine("Nao existe nenhum utente com ese numero de utente! ");
+                Console.WriteLine("Nao existe nenhum utente com esse numero de utente! ");
             }
 
             else if (aux == 2)

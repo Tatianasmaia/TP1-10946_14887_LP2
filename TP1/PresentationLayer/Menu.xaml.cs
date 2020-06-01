@@ -25,9 +25,8 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        
         /// <summary>
-        /// Botão Registar Utente
+        /// Botão Registar
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -36,7 +35,39 @@ namespace PresentationLayer
             RegistarUtente expenseReportPage = new RegistarUtente();
             this.NavigationService.Navigate(expenseReportPage);
         }
-        
+
+        /// <summary>
+        /// Botão Editar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Editar_Click(object sender, RoutedEventArgs e)
+        {
+            MenuEditar expenseReportPage = new MenuEditar();
+            this.NavigationService.Navigate(expenseReportPage);
+        }
+
+        /// <summary>
+        /// Botão Remover
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Remover_Click(object sender, RoutedEventArgs e)
+        {
+            RemoverUtente expenseReportPage = new RemoverUtente();
+            this.NavigationService.Navigate(expenseReportPage);
+        }
+
+        /// <summary>
+        /// Botão Consultar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Consultar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Botão Sair
         /// </summary>

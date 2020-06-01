@@ -57,6 +57,51 @@ namespace DL
 
         #region Metodos_Da_Classe
 
+        public static int VerificaUtente(Utente u)
+        {
+            bool aux;
+
+
+            //Verificação da idade
+            while (u.Idade < 0 || u.Idade > 110)
+            {
+                return 0;
+            }
+
+            //Verifica se o nif tem 9 digitos
+            do
+            {
+                aux = VerificaDigitos(u.Nif);
+                if (aux == false)
+                {
+                    return 1;
+                }
+            }
+            while (aux == false);
+
+
+            //Verifica se o nif já foi inserido por outro utente
+            foreach(Utente ut in listaUtentes)
+            {
+                if (u.Nif == ut.Nif)
+                {
+                    return 2;
+                }
+            }
+
+
+            //Verifica o sexo
+
+            //while (u.Sexo != "feminino" || u.Sexo != "masculino")
+            //{
+            //    return 3;
+
+            //}
+
+            InsereUtente(u);
+            return 4;
+        }
+
         /// <summary>
         /// Recebe um utente(u) do tipo Utente.
         /// Caso o utente já estiver inserido na lista irá retornar false.
@@ -124,6 +169,52 @@ namespace DL
             }
 
             return null;
+        }
+
+        public static int EditarInformacao(string nome, string idade, string nif, string regiao, string sexo, int numU)
+        {
+            //foreach (Utente ut in listaUtentes)
+            //    if (ut.NumUtente == numU)
+            //    {
+
+            //        if (!string.IsNullOrWhiteSpace(username))
+            //        {
+
+            //            foreach (Utilizador teste in userList)
+            //                if (teste.Username == username) possivel = false;
+
+            //            if (possivel == true) { currentUser.Username = username; test.Username = username; }
+
+            //            else { return 2; }
+
+            //        }
+
+            //        if (!string.IsNullOrWhiteSpace(password)) { currentUser.Password = password; test.Password = password; }
+
+            //        if (!string.IsNullOrWhiteSpace(primeiroNome)) { currentUser.PrimeiroNome = primeiroNome; test.PrimeiroNome = primeiroNome; }
+
+            //        if (!string.IsNullOrWhiteSpace(ultimoNome)) { currentUser.UltimoNome = ultimoNome; test.UltimoNome = ultimoNome; }
+
+            //        if (!string.IsNullOrWhiteSpace(curso)) { currentUser.Curso = curso; test.Curso = curso; }
+
+            //        if (!string.IsNullOrWhiteSpace(email))
+            //        {
+
+            //            possivel = Utilizadores.checkEmail(email);
+
+            //            if (possivel == true) { currentUser.Email = email; test.Email = email; }
+
+            //            else { return 3; }
+
+            //        }
+
+            //    }
+
+            //if (string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password) && string.IsNullOrWhiteSpace(primeiroNome) && string.IsNullOrWhiteSpace(ultimoNome) && string.IsNullOrWhiteSpace(curso) && string.IsNullOrWhiteSpace(email)) return 4;
+
+
+
+            return 1;
         }
 
         /// <summary>

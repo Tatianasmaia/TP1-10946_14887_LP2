@@ -1,0 +1,16 @@
+﻿<Page x:Class="PresentationLayer.VoltarAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PresentationLayer"
+      mc:Ignorable="d"
+      Title="VoltarAdd" Height="437.812" Width="365">
+
+    <Grid Margin="0,0,0,10">
+        <TextBlock HorizontalAlignment="Left" Margin="20,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="345"><Run Text="Insira o número do utente que pretende editar" FontSize="16"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="27" Margin="107,127,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148" Name="tb_num"/>
+        <Button Content="Voltar a Adicionar Utente aos Infetados" HorizontalAlignment="Left" Margin="73,220,0,0" VerticalAlignment="Top" Width="230" Height="47" Name="bt_VoltarAdd" Click="bt_VoltarAdd_Click"/>
+
+    </Grid>
+</Page>

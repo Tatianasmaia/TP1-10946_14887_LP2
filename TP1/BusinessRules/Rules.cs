@@ -38,6 +38,16 @@ namespace BR
         }
 
         /// <summary>
+        /// Função que verifica as informações do utente a registar
+        /// </summary>
+        /// <param name="u"></param>
+        /// <returns></returns>
+        public static int VerificaUtente(Utente u)
+        {
+            return Utentes.VerificaUtente(u);
+        }
+
+        /// <summary>
         /// Função que remove infetado
         /// </summary>
         /// <param name="num">numero do utente a remover</param>
@@ -58,6 +68,11 @@ namespace BR
         public static Utente PesquisaUtente(int nif)
         {
             return Utentes.PesquisaUtente(nif);
+        }
+
+        public static int EditarInformacao(string nome, string idade, string nif, string regiao, string sexo, int numU)
+        {
+            return Utentes.EditarInformacao(nome, idade, nif, regiao, sexo, numU);
         }
 
         /// <summary>

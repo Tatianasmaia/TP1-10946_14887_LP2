@@ -24,5 +24,20 @@ namespace PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void EditarUtente_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void VoltaAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Sair_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

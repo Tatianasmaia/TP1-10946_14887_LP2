@@ -12,11 +12,11 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Registar" Content="Registar Utente" HorizontalAlignment="Left" Margin="194,124,0,0" VerticalAlignment="Top" Width="141" Height="54" Click="Registar_Click"/>
-        <Button x:Name="Editar" Content="Editar Utente" HorizontalAlignment="Left" Margin="194,200,0,0" VerticalAlignment="Top" Width="141" Height="54" Click="Editar_Click"/>
-        <Button x:Name="Remover" Content="Remover Utente" HorizontalAlignment="Left" Margin="194,273,0,0" VerticalAlignment="Top" Width="141" Height="54" Click="Remover_Click"/>
-        <Button x:Name="Consultar" Content="Consultar" HorizontalAlignment="Left" Margin="194,350,0,0" VerticalAlignment="Top" Width="141" Height="54" Click="Consultar_Click"/>
-        <Button x:Name="Sair" Content="Sair" HorizontalAlignment="Left" Margin="397,438,0,0" VerticalAlignment="Top" Width="73" Height="29" Click="Sair_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="163,10,0,0" TextWrapping="Wrap" Text="Gestão Hospitalar" VerticalAlignment="Top" Height="48" Width="234" Foreground="white" FontSize="24"/>
+        <Button x:Name="Registar" Content="Registar Utente" HorizontalAlignment="Left" Margin="180,63,0,0" VerticalAlignment="Top" Width="155" Height="55" Click="Registar_Click" FontSize="15"/>
+        <Button x:Name="Editar" Content="Editar Utente" HorizontalAlignment="Left" Margin="180,141,0,0" VerticalAlignment="Top" Width="155" Height="56" Click="Editar_Click" FontSize="15"/>
+        <Button x:Name="Remover" Content="Remover Utente" HorizontalAlignment="Left" Margin="180,217,0,0" VerticalAlignment="Top" Width="155" Height="56" Click="Remover_Click" FontSize="15"/>
+        <Button x:Name="Consultar" Content="Consultar" HorizontalAlignment="Left" Margin="180,291,0,0" VerticalAlignment="Top" Width="155" Height="56" Click="Consultar_Click" FontSize="15"/>
+        <Button x:Name="Sair" Content="Sair" HorizontalAlignment="Left" Margin="380,384,0,0" VerticalAlignment="Top" Width="73" Height="29" Click="Sair_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="163,10,0,0" TextWrapping="Wrap" Text="Gestão Hospitalar" VerticalAlignment="Top" Height="48" Width="234" FontSize="24"/>
     </Grid>
 </Page>

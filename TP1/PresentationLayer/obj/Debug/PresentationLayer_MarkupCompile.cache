@@ -9,12 +9,12 @@ PresentationLayer
 none
 false
 DEBUG;TRACE
-C:\Users\utilizador\Desktop\TP1\PresentationLayer\.xaml
-61398329611
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\App.xaml
+81985298916
 
-101646777723
-13-1505183044
-Edita1.xaml;EditarInformacao.xaml;MainWindow.xaml;Menu.xaml;RegistarUtente.xaml;RemoverUtente.xaml;
+121579269745
+151867669289
+EditarInformacao.xaml;MainWindow.xaml;Menu.xaml;MenuEditar.xaml;PedirNumUtente.xaml;RegistarUtente.xaml;RemoverUtente.xaml;VoltarAdd.xaml;
 
-True
+False
 

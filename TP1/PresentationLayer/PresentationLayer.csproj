@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83C39494-3951-4736-822E-67348677E6A3}</ProjectGuid>
+    <ProjectGuid>{3AAC5FCE-3373-4852-92EC-1268565100CB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PresentationLayer</RootNamespace>
     <AssemblyName>PresentationLayer</AssemblyName>
@@ -51,29 +51,25 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include=".xaml">
+    <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Edita1.xaml.cs">
-      <DependentUpon>Edita1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="EditarInformacao.xaml.cs">
       <DependentUpon>EditarInformacao.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="MenuEditar.xaml.cs">
+      <DependentUpon>MenuEditar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
+    <Compile Include="RegistarUtente.xaml.cs">
+      <DependentUpon>RegistarUtente.xaml</DependentUpon>
     </Compile>
     <Compile Include="RemoverUtente.xaml.cs">
       <DependentUpon>RemoverUtente.xaml</DependentUpon>
     </Compile>
-    <Page Include="Edita1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="VoltarAdd.xaml.cs">
+      <DependentUpon>VoltarAdd.xaml</DependentUpon>
+    </Compile>
     <Page Include="EditarInformacao.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -82,27 +78,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Page Include="Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegistarUtente.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="MenuEditar.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include=".xaml.cs">
-      <DependentUpon>.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="RegistarUtente.xaml.cs">
-      <DependentUpon>RegistarUtente.xaml</DependentUpon>
-    </Compile>
+    <Page Include="RegistarUtente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RemoverUtente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VoltarAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -127,6 +135,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj">
+      <Project>{99f90635-f182-47c8-adfa-21f5be1c9caa}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessRules\BusinessRules.csproj">
+      <Project>{554fd17a-e3fc-4674-9c4a-6c2533b5030e}</Project>
+      <Name>BusinessRules</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
