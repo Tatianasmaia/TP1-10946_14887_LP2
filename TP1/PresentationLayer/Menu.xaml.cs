@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace PresentationLayer
 {
@@ -59,13 +48,25 @@ namespace PresentationLayer
         }
 
         /// <summary>
-        /// Botão Consultar
+        /// Botão Consultar Utente
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Consultar_Click(object sender, RoutedEventArgs e)
         {
+            ConsultarUtente expenseReportPage = new ConsultarUtente();
+            this.NavigationService.Navigate(expenseReportPage);
+        }
 
+        /// <summary>
+        /// Botão Consultar utentes pela idade introduzida
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ConsultarIdade_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarIdades expenseReportPage = new ConsultarIdades();
+            this.NavigationService.Navigate(expenseReportPage);
         }
 
         /// <summary>
@@ -76,6 +77,12 @@ namespace PresentationLayer
         private void Sair_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private void ConsultarRegiao_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarRegiao expenseReportPage = new ConsultarRegiao();
+            this.NavigationService.Navigate(expenseReportPage);
         }
     }
 }

@@ -57,7 +57,7 @@ namespace PresentationLayer
             }
             catch
             {
-                throw new Exception("Cadeia de caracteres invalida!");
+                throw new Exception("Cadeia de caracteres inválida!");
             }
 
             try
@@ -66,7 +66,7 @@ namespace PresentationLayer
             }
             catch
             {
-                throw new Exception("Cadeia de caracteres invalida!");
+                throw new Exception("Cadeia de caracteres inválida!");
             }
             
             u.Regiao = tb_Regiao.Text;
@@ -80,7 +80,7 @@ namespace PresentationLayer
             }
             else if (aux == 1)
             {
-                MessageBox.Show("O nif que inseriu não possui o námero de dígitos correto!");
+                MessageBox.Show("O nif que inseriu não possui o número de dígitos correto!");
             }
             else if (aux == 2)
             {

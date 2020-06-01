@@ -44,7 +44,7 @@ namespace BO
         /// <param name="i"></param>
         /// <param name="ni"></param>
         /// <param name="d"></param>
-        public Utente(string n, string r, string s, int i, int ni, DateTime d) : base(n, r, s, i, ni, d)
+        public Utente(string n, string r, string s, int i, int ni) : base(n, r, s, i, ni)
         {
             totalUtentes++;
             numUtente = totalUtentes;

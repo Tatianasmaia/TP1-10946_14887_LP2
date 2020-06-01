@@ -31,5 +31,9 @@ C:\Users\utilizador\Desktop\TP1\PresentationLayer\bin\Debug\DataLayer.pdb
 C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\PresentationLayer.csproj.CopyComplete
 C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\VoltarAdd.g.cs
 C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\VoltarAdd.baml
-C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\PedirNumUtente.g.cs
-C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\PedirNumUtente.baml
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\ConsultarIdades.g.cs
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\ConsultarUtente.g.cs
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\ConsultarIdades.baml
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\ConsultarUtente.baml
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\ConsultarRegiao.g.cs
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\ConsultarRegiao.baml

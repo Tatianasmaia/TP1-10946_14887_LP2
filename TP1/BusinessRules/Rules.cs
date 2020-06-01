@@ -100,7 +100,7 @@ namespace BR
         /// </summary>
         /// <param name="nif"></param>
         /// <returns></returns>
-        public static bool VerificaNif(int nif)
+        public static int VerificaNif(int nif)
         {
             return Utentes.VerificaNif(nif);
         }

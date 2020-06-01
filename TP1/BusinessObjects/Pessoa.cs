@@ -27,7 +27,6 @@ namespace BO
 
         int idade, nif;
         string nome, regiao, sexo;
-        DateTime dataN;
         [NonSerialized]
         bool infetado;
 
@@ -47,7 +46,6 @@ namespace BO
             sexo = "";
             idade = -1;
             nif = -1;
-            dataN = DateTime.Today;
             infetado = true;
         }
 
@@ -61,14 +59,13 @@ namespace BO
         /// <param name="i">Idade da Pessoa</param>
         /// <param nif="ni">Nif da Pessoa</param>
         /// <param dataN="d">Data de nascimento da Pessoa</param>
-        public Pessoa(string n, string r, string s, int i, int ni, DateTime d)
+        public Pessoa(string n, string r, string s, int i, int ni)
         {
             nome = n;
             regiao =r;
             sexo = s;
             idade = i;
             nif = ni;
-            dataN = d;
             infetado = true;
         }
 
@@ -127,22 +124,6 @@ namespace BO
             set { sexo = value; }
         }
 
-        /// <summary>
-        /// Manipula o atributo "dataN"
-        /// DateTime dataN;
-        /// </summary>
-        public DateTime DataN
-        {
-            get { return dataN; }
-            set
-            {
-                DateTime aux;
-                if (DateTime.TryParse(value.ToString(), out aux) == true)
-                {
-                    dataN = value;
-                }
-            }
-        }
 
         public bool Infetado
         {

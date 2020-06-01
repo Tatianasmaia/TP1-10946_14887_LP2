@@ -57,6 +57,16 @@ namespace DL
 
         #region Metodos_Da_Classe
 
+        /// <summary>
+        /// Função que verifica se o utente inserido pleo utilizador é válido
+        /// </summary>
+        /// <param name="u">utente do tipo Utente</param>
+        /// <returns>
+        /// 0- Caso a idade inserida não seja válida
+        /// 1- Caso o número de dígitos não seja válido
+        /// 2- Caso o nif inserido já esteja registado
+        /// 3- Caso o sexo inserido não seja válido
+        /// 4- Caso o utente tenha sido adicionado à lista com sucesso</returns>
         public static int VerificaUtente(Utente u)
         {
             bool aux;
@@ -89,9 +99,7 @@ namespace DL
                 }
             }
 
-
             //Verifica o sexo
-
             //while (u.Sexo != "feminino" || u.Sexo != "masculino")
             //{
             //    return 3;
@@ -171,50 +179,92 @@ namespace DL
             return null;
         }
 
+        /// <summary>
+        /// Função que edita um utente infetado
+        /// </summary>
+        /// <param name="nome">nome do utente</param>
+        /// <param name="idade">idade do utente</param>
+        /// <param name="nif">nif do utente</param>
+        /// <param name="regiao">regiao do utente</param>
+        /// <param name="sexo">sexo do utente</param>
+        /// <param name="numU">numero de utente</param>
+        /// <returns></returns>
         public static int EditarInformacao(string nome, string idade, string nif, string regiao, string sexo, int numU)
         {
-            //foreach (Utente ut in listaUtentes)
-            //    if (ut.NumUtente == numU)
-            //    {
+            //Caso nenhuma textBox tenha sido preenchida dá return a 0
+            if (string.IsNullOrWhiteSpace(nome) && string.IsNullOrWhiteSpace(idade) && string.IsNullOrWhiteSpace(nif) && string.IsNullOrWhiteSpace(regiao) && string.IsNullOrWhiteSpace(sexo)) return 0;
 
-            //        if (!string.IsNullOrWhiteSpace(username))
-            //        {
+            foreach (Utente ut in listaUtentes)
+            {
+                if (ut.NumUtente == numU)
+                {
+                    //Verifica se a caixa do nome foi preenchida para fazer a edição do nome
+                    if (!string.IsNullOrWhiteSpace(nome))
+                    {
 
-            //            foreach (Utilizador teste in userList)
-            //                if (teste.Username == username) possivel = false;
+                        ut.Nome = nome;
 
-            //            if (possivel == true) { currentUser.Username = username; test.Username = username; }
+                    }
 
-            //            else { return 2; }
+                    //Verifica se a caixa da idade foi preenchida para fazer a edição da idade
+                    if (!string.IsNullOrWhiteSpace(idade))
+                    {
+                        int idadeAux = Int32.Parse(idade);
+                        bool aux = VerificaIdade(idadeAux);
 
-            //        }
+                        if (aux == false)
+                        {
+                            return 1;
+                        }
+                        else
+                        {
+                            ut.Idade = idadeAux;
+                        }
 
-            //        if (!string.IsNullOrWhiteSpace(password)) { currentUser.Password = password; test.Password = password; }
+                    }
 
-            //        if (!string.IsNullOrWhiteSpace(primeiroNome)) { currentUser.PrimeiroNome = primeiroNome; test.PrimeiroNome = primeiroNome; }
+                    //Verifica se a caixa do nif foi preenchida para fazer a edição do nif
+                    if (!string.IsNullOrWhiteSpace(nif)) 
+                    {
+                        int nifAux = Int32.Parse(nif);
+                        int aux = VerificaNif(nifAux);
 
-            //        if (!string.IsNullOrWhiteSpace(ultimoNome)) { currentUser.UltimoNome = ultimoNome; test.UltimoNome = ultimoNome; }
+                        //Caso o número de digitos não esteja correto
+                        if (aux == 0)
+                        {
+                            return 2;
+                        }
+                        //Caso o nif já tenha sido inserido por outro utente
+                        else if(aux == 1)
+                        {
+                            return 3;
+                        }
+                        //Sucesso
+                        else if(aux == 2)
+                        {
+                            ut.Idade = nifAux;
+                        }
+                    }
 
-            //        if (!string.IsNullOrWhiteSpace(curso)) { currentUser.Curso = curso; test.Curso = curso; }
+                    //Verifica se a caixa da regiao foi preenchida para fazer a edição da regiao
+                    if (!string.IsNullOrWhiteSpace(regiao))
+                    {
+                        ut.Regiao = regiao;
+                    }
 
-            //        if (!string.IsNullOrWhiteSpace(email))
-            //        {
+                    //Verifica se a caixa do sexo foi preenchida para fazer a edição do sexo
+                    if (!string.IsNullOrWhiteSpace(sexo)) 
+                    {
+                        ut.Sexo = sexo;    
+                    }
 
-            //            possivel = Utilizadores.checkEmail(email);
+                    return 4;
 
-            //            if (possivel == true) { currentUser.Email = email; test.Email = email; }
+                }
+            }
+           
 
-            //            else { return 3; }
-
-            //        }
-
-            //    }
-
-            //if (string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password) && string.IsNullOrWhiteSpace(primeiroNome) && string.IsNullOrWhiteSpace(ultimoNome) && string.IsNullOrWhiteSpace(curso) && string.IsNullOrWhiteSpace(email)) return 4;
-
-
-
-            return 1;
+            return 5;
         }
 
         /// <summary>
@@ -252,42 +302,33 @@ namespace DL
         /// Função que faz a verificação do nif do utente, pois não podem haver nifs iguais
         /// </summary>
         /// <param name="nif"></param>
-        /// <returns></returns>
-        public static bool VerificaNif(int nif)
+        /// <returns>
+        /// 0-> Caso o nif não tenha o número de digitos correto
+        /// 1-> Caso o nif já tenha sido registado por outro utente
+        /// 2-> Caso o nif possa ser adicionado com sucesso</returns>
+        public static int VerificaNif(int nif)
         {
-            foreach(Utente u in listaUtentes)
+            bool aux = VerificaDigitos(nif);
+
+            if (aux == false)
             {
-                if (u.Nif == nif)
+                return 0;
+            }
+            else
+            {
+                foreach(Utente u in listaUtentes)
                 {
-                    return true;
+                    if (u.Nif == nif)
+                    {
+                      return 1;
+                    }
                 }
             }
-
-            return false;
+            
+            return 2;
         }
 
-        /// <summary>
-        /// Função que verifica o numero de digitos do nif inserido pleo utilizador
-        /// </summary>
-        /// <param name="nif"></param>
-        /// <returns></returns>
-        public static bool VerificaDigitos(int nif)
-        {        
-            int  count = 0;
-            
-            while (nif > 0)
-            {
-                nif = nif / 10;
-                count++;
-            }
-
-            if (count != 9)
-            {
-                return false;
-            }
-            else return true;
-            
-        }
+        
 
         /// <summary>
         /// Função que, a partir da idade inserida pelo utilizador, insere todos os utentes com essa mesma idade numa lista auxiliar para que seja possivel mostrar
@@ -368,15 +409,50 @@ namespace DL
         }
 
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param =""></param>
-        /// <returns></returns>
-        //public static int Editar()
-        //{
+        #region Metodos_Auxiliares
 
-        //}
+        /// <summary>
+        /// Função que verifica o numero de digitos do nif inserido pleo utilizador
+        /// </summary>
+        /// <param name="nif"></param>
+        /// <returns>
+        /// false-> Caso o nif não tenha o número de digitos correto
+        /// true-> Caso o nif tenha os 9 digitos</returns>
+        public static bool VerificaDigitos(int nif)
+        {        
+            int  count = 0;
+            
+            while (nif > 0)
+            {
+                nif = nif / 10;
+                count++;
+            }
+
+            if (count != 9)
+            {
+                return false;
+            }
+            else return true;
+            
+        }
+
+        /// <summary>
+        /// Função que verifica idade
+        /// </summary>
+        /// <param name="idade"></param>
+        /// <returns>
+        /// false-> Se a idade não for válida
+        /// true-> Se a idade for válida</returns>
+        public static bool VerificaIdade(int idade)
+        {
+            if (idade < 0 || idade > 110)
+            {
+                return false;
+            }
+            else return true;
+        }
+
+        #endregion
 
 
         #endregion
