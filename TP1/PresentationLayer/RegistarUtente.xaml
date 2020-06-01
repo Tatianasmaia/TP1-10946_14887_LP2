@@ -1,4 +1,4 @@
-﻿<Window x:Class="PresentationLayer.MainWindow"
+﻿<Page x:Class="PresentationLayer.RegistarUtente"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -28,4 +28,4 @@
         <TextBox Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="25.533,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
         
     </Grid>
-</Window>
+</Page>

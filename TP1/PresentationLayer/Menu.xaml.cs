@@ -16,43 +16,35 @@ using System.Windows.Shapes;
 namespace PresentationLayer
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// MENU
+    /// Interaction logic for Menu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Menu : Page
     {
-        public MainWindow()
+        public Menu()
         {
             InitializeComponent();
         }
 
-        //Botão Registar Utente
-        private void Button_Click(object sender, RoutedEventArgs e)
+        
+        /// <summary>
+        /// Botão Registar Utente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Registar_Click(object sender, RoutedEventArgs e)
         {
-            RegistarUtente aux = new RegistarUtente();
+            RegistarUtente expenseReportPage = new RegistarUtente();
+            this.NavigationService.Navigate(expenseReportPage);
         }
-
-        //Botão Editar Utente
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        
+        /// <summary>
+        /// Botão Sair
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Sair_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        //Botão Remover Utente
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        //Botão Consultar Registos
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

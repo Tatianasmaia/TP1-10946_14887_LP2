@@ -19,12 +19,17 @@ namespace PresentationLayer
     /// Interaction logic for MainWindow.xaml
     /// MENU
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RegistarUtente : Page
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        //public RegistarUtente()
+        //{
+        //    InitializeComponent();
+        //}
+
+        //private void InitializeComponent()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         //Botão Registar Utente
         private void Registar(object sender, RoutedEventArgs e)
@@ -53,7 +58,7 @@ namespace PresentationLayer
       
         private void TextBox_TextChanged_Nome(object sender, TextChangedEventArgs e)
         {
-             if (!string.IsNullOrWhiteSpace(TextBox_TextChanged_Nome.Text)) Utilizadores.currentUser.Username = textBox1.Text;
+             //if (!string.IsNullOrWhiteSpace(TextBox_TextChanged_Nome.Text)) Utilizadores.currentUser.Username = textBox1.Text;
         }
     }
 }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\utilizador\Desktop\10946_14887_LP2\TP1\PresentationLayer\obj\Debug\
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\
 PresentationLayer
 none
 false
 DEBUG;TRACE
-C:\Users\utilizador\Desktop\10946_14887_LP2\TP1\PresentationLayer\.xaml
-21511607502
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\.xaml
+61398329611
 
-7-1343841739
+101646777723
 13-1505183044
-RegistarUtente.xaml;Menu.xaml;
+Edita1.xaml;EditarInformacao.xaml;MainWindow.xaml;Menu.xaml;RegistarUtente.xaml;RemoverUtente.xaml;
 
 True
 

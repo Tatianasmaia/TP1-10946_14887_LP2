@@ -1,0 +1,9 @@
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\PresentationLayer.csprojAssemblyReference.cache
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\Edita1.g.cs
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\EditarInformacao.g.cs
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\MainWindow.g.cs
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\Menu.g.cs
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\RegistarUtente.g.cs
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\PresentationLayer_MarkupCompile.cache
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\PresentationLayer_MarkupCompile.lref
+C:\Users\utilizador\Desktop\TP1\PresentationLayer\obj\Debug\RemoverUtente.g.cs
