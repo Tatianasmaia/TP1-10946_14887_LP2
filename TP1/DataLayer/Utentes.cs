@@ -88,7 +88,7 @@ namespace DL
             //Verifica se o nif tem 9 digitos
             do
             {
-                aux = VerificaDigitos(u.Nif);
+                aux = VerifyDigits(u.Nif);
                 if (aux == false)
                 {
                     return 1;
@@ -113,7 +113,7 @@ namespace DL
 
             }
 
-            InsereUtente(u);
+            InsertPatient(u);
             return 4;
         }
 
@@ -221,7 +221,7 @@ namespace DL
                     if (!string.IsNullOrWhiteSpace(idade))
                     {
                         int idadeAux = Int32.Parse(idade);
-                        bool aux = VerificaIdade(idadeAux);
+                        bool aux = VerifyAge(idadeAux);
 
                         if (aux == false)
                         {
@@ -238,7 +238,7 @@ namespace DL
                     if (!string.IsNullOrWhiteSpace(nif)) 
                     {
                         int nifAux = Int32.Parse(nif);
-                        int aux = VerificaNif(nifAux);
+                        int aux = VerifyNif(nifAux);
 
                         //Caso o número de digitos não esteja correto
                         if (aux == 0)
@@ -320,7 +320,7 @@ namespace DL
         /// 2-> Caso o nif possa ser adicionado com sucesso</returns>
         public static int VerifyNif(int nif)
         {
-            bool aux = VerificaDigitos(nif);
+            bool aux = VerifyDigits(nif);
 
             if (aux == false)
             {

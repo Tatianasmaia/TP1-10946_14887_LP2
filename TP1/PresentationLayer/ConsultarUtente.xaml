@@ -9,7 +9,7 @@
 
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="343,10,0,0" TextWrapping="Wrap" Text="Consultar Utente Através do Nif" VerticalAlignment="Top" FontSize="22" Height="45" Width="516"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="403,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Name="tb_Nif" TextChanged="tb_Nif_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="403,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Name="tb_Nif"/>
         <Button Content="Consultar" HorizontalAlignment="Left" Margin="411,119,0,0" VerticalAlignment="Top" Width="151" Height="25" Name="bt_Consultar" Click="bt_Consultar_Click"/>
 
     </Grid>
